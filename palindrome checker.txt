@@ -1,0 +1,16 @@
+// Palindrome function
+function palindrome(str) {
+  // converting string to lowercase and removing nonalphanumeric characters
+  str = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+
+  // Iterating through the string to check if each element matches its counterpart in reverse order
+  for (let i = 0; i < str.length; i++) {
+    if(str[i] != str[str.length - (i + 1)]) 
+      return false;
+  }
+  return true;
+}
+
+
+
+palindrome("eye");
